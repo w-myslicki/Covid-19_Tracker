@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/img/springIco.png" type="image/png">
+    <title>COVID-19 TRACKER</title>
+    <link href="../static/css/home.css" th:href="@{/css/home.css}" rel="stylesheet" />
+</head>
+<body>
+    <header class = "header">
+        <div class = "container">
+            <div class = "information">
+                <p class = "nameApp">COVID-19 TRACKER</p>
+                <p class = "infoApp">This is application lists the current number cases<br>
+                    reported across the globe</p>
+            </div>
+            <div class = "wrapperStates">
+                <div class="totalCasesWrapper">
+                    <p>Total cases reported as of today</p>
+                    <p class = "totalNumber" th:text="${sumStats}">0</p>
+                </div>
+                <div class = "hrStates"></div>
+                <div class="newCasesWrapper">
+                    <p>New cases reported since previous day</p>
+                    <p class = "newNumber" th:text="${thisDay}">0</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class = "container">
+        <table class = "table">
+            <tr>
+                <th>State</th>
+                <th>Country</th>
+                <th>Total case reported</th>
+                <th>Changes since last day</th>
+            </tr>
+            <tr th:each="allStat : ${allStats}">
+                <td th:text="${allStat.state}"></td>
+                <td th:text="${allStat.country}"></td>
+                <td th:text="${allStat.latestTotalCase}">0</td>
+                <td th:text="${allStat.diffFromPrevDay}">0</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

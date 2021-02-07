@@ -1,0 +1,78 @@
+@font-face
+{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+}
+
+p, hr{
+    margin: 0px;
+}
+
+.container
+{
+    width: 1300px;
+    margin: 0px auto;
+}
+
+.header {
+    background:#BCD1DA;
+}
+
+.information {
+    padding-top: 60px;
+    text-align: center;
+    padding-bottom: 76px;
+}
+
+.nameApp {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.infoApp {
+    font-size: 16px;
+    font-weight: 300;
+
+}
+
+.wrapperStates {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 28px;
+    margin-left: 60px;
+    padding-bottom: 60px;
+}
+
+.hrStates {
+    border-left: 1px solid #000;
+    height: 150px;
+    width: 1px;
+}
+
+
+.totalCasesWrapper{
+    padding-right: 15px;
+    margin-top: 40px;
+}
+
+.totalNumber {
+    padding-top: 12px;
+}
+
+.newCasesWrapper {
+    padding-left: 15px;
+    margin-top: 40px;
+}
+
+.newNumber {
+    padding-top: 12px;
+}
+
