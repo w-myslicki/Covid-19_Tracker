@@ -75,4 +75,27 @@ p, hr{
 .newNumber {
     padding-top: 12px;
 }
+.footer {
+    background: #BCD1DA;
+}
+
+.footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.footerInfo p {
+    font-size: 12px;
+}
+
+.footerLinks {
+    display: flex;
+    align-items: center;
+}
+
+.github {
+    padding-right: 10px;
+}
 
